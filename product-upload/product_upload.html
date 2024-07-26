@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Product Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold text-gray-800">Admin Dashboard</a>
+            <div>
+                <a href="#" class="text-gray-600 hover:text-gray-800 mx-4">Dashboard</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800 mx-4">Products</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800 mx-4">Orders</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800 mx-4">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-10">
+        <div class="bg-white shadow-md rounded-lg p-8 max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center">Upload New Product</h2>
+            <div>
+                <!-- Product Name -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="productName">
+                        Product Name
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productName" type="text" placeholder="Enter product name">
+                </div>
+                <!-- Product Description -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="productDescription">
+                        Product Description
+                    </label>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productDescription" rows="4" placeholder="Enter product description"></textarea>
+                </div>
+                <!-- Product Price -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="productPrice">
+                        Product Price ($)
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productPrice" type="number" placeholder="Enter product price">
+                </div>
+                <!-- Product Category -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="productCategory">
+                        Product Category
+                    </label>
+                    <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productCategory">
+                        <option>Electronics</option>
+                        <option selected>Clothing</option>
+                        <option>Home & Garden</option>
+                        <option>Sports</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <!-- Product Image -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="productImage">
+                        Product Image
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productImage" type="file">
+                </div>
+                <!-- Submit Button -->
+                <div class="flex items-center justify-between">
+                    <button onclick="uploadPro()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Upload Product
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./product_upload.js"></script>
+</body>
+</html>

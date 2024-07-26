@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="font-bold text-2xl lg:text-4xl">BrandName</a>
+            <nav class="hidden lg:flex space-x-6 flex items-center ">
+                <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
+                <a id="signinLink" href="./Sign_In/signIn.html" class="text-gray-800 hover:text-gray-600">Sign in</a>
+                <a id="loginLink" href="./login/login.html" class="text-gray-800 hover:text-gray-600">Login</a>
+                <a id="uplodLink" href="./product-upload/product_upload.html" class="text-gray-600 hover:text-gray-800 mx-4">Upload Product</a>
+                <button onclick="logout()" id="logoutBtn" class="text-white bg-blue-500 mx-3 p-2 rounded hidden">LogOut</button>
+            </nav>
+            <div class="lg:hidden"> 
+                <button class="text-gray-800 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-full" style="background-image: url('https://t4.ftcdn.net/jpg/07/41/09/09/360_F_741090944_FV8Iik9MccRaDPVd1TxU2y4rdnZw5zcp.jpg');">
+        <div class="container mx-auto px-6 py-32 text-center">
+            <h1 class="text-4xl lg:text-6xl text-white font-bold">Discover the Best Products</h1>
+            <p class="mt-4 text-lg lg:text-2xl text-white">High quality products at unbeatable prices</p>
+            <!-- <a href="#" class="mt-8 px-4 py-2 bg-yellow-500 text-white text-lg font-semibold rounded hover:bg-yellow-600">Shop Now</a> -->
+        </div>
+    </section>
+    <!-- Product Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-center text-gray-800">Featured Products</h2>
+        <div id="product_content" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <!-- Repeat Product Cards as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="container mx-auto px-6 py-8 text-white flex justify-between">
+            <p>&copy; 2024 BrandName. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
